@@ -10,9 +10,12 @@ function Stopwatch({ color }) {
     setInterval(() => {
       setTimeInMillis((prevValue) => prevValue + 100);
     }, 100);
+    return () => clearInterval(intervalId);
   }, []);
 
-  const onReset = () => { setTimeInMillis(0); };
+  const onReset = () => {
+    setTimeInMillis(0);
+  };
 
   return (
     <div className="stopwatch" style={{ color }}>

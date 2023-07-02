@@ -4,9 +4,7 @@ import Stopwatch from './components/Stopwatch';
 import './styles/style.css';
 
 function App() {
-  return (
-    <Stopwatch />
-  );
+  return <Stopwatch />;
 }
 
 export default App;
